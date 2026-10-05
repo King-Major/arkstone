@@ -38,8 +38,9 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative flex min-h-[90vh] items-center overflow-hidden bg-ink pt-20">
-        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=2000&q=80" alt="" className="absolute inset-0 h-full w-full object-cover" />
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Lagos_skyline.jpg/1920px-Lagos_skyline.jpg" alt="Victoria Island skyline in Lagos" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-ink/80 to-ink/20" />
+        <a href="https://commons.wikimedia.org/wiki/File:Lagos_skyline.jpg" target="_blank" rel="noreferrer" className="absolute bottom-3 right-4 z-10 text-[10px] text-white/70 hover:text-white">Photo: Clara Sanchiz · CC BY-SA 2.0</a>
         <div className="container-x relative py-20">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-3xl">
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-gold-light">A more considered way to invest</p>
