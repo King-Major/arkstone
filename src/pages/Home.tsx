@@ -29,6 +29,12 @@ const faqs = [
   ["Do you advise on commercial real estate as well as residential?", "Yes. In addition to luxury residential homes, Arkstone advises corporate clients and private investors on prime commercial acquisitions, including Grade-A office spaces, flagship retail hubs, and strategic development land in Ikoyi, Victoria Island, and Lekki."],
 ];
 const filters = ["All", "Luxury Residential", "Commercial Assets"] as const;
+const teamCards = [
+  { name: "Bisola Loto", role: "Principal Advisor & Managing Partner", focus: "Strategic advisory, client relations, and high-stakes price negotiation.", accent: "bg-navy-deep text-white" },
+  { name: "Nonso Azubike", role: "Managing Partner", focus: "Commercial and residential developer relationships, market research, and brand operations.", accent: "bg-ink text-white" },
+  { name: "Tosin Omotosho", role: "Head of Legal & Title Due Diligence", focus: "Document checks, legal searches, and buyer protection.", accent: "bg-navy text-white" },
+];
+const initials = (name: string) => name.split(" ").map((part) => part[0]).join("");
 
 export default function Home() {
   const [f, setF] = useState<(typeof filters)[number]>("All");
@@ -42,7 +48,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-ink/80 to-ink/20" />
         <a href="https://commons.wikimedia.org/wiki/File:Lagos_skyline.jpg" target="_blank" rel="noreferrer" className="absolute bottom-3 right-4 z-10 text-[10px] text-white/70 hover:text-white">Photo: Clara Sanchiz · CC BY-SA 2.0</a>
         <div className="container-x relative py-20">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-3xl">
+          <motion.div initial={{ opacity: 0, y: 32, x: -20 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }} className="max-w-3xl">
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-gold-light">A more considered way to invest</p>
             <h1 className="max-w-2xl text-5xl font-semibold leading-[0.98] text-white md:text-7xl lg:text-8xl">Lagos property, <span className="text-gold-light">with confidence.</span></h1>
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/80">Direct access to exceptional properties, verified title information, expert negotiation, and attentive support long after handover.</p>
@@ -54,28 +60,59 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-ivory py-6 md:py-10">
+        <div className="container-x -mt-12 relative z-20">
+          <div className="grid gap-5 md:grid-cols-3">
+            {teamCards.map(({ name, role, focus, accent }, i) => (
+              <motion.div
+                key={name}
+                initial={{ opacity: 0, y: 42, scale: 0.96 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.9, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={{ y: -8, rotateX: 4, rotateY: -4 }}
+                className="group relative overflow-hidden border border-ink/10 bg-white shadow-[0_18px_50px_rgba(16,36,58,0.08)] transition-all duration-300 hover:border-gold/60 hover:shadow-[0_26px_65px_rgba(16,36,58,0.12)]"
+              >
+                <div className={`relative flex aspect-[1.25/1] items-center justify-center overflow-hidden ${accent}`}>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(201,179,134,0.22),transparent_55%)]" />
+                  <span className="absolute right-4 top-3 font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-white/55">0{i + 1} / 03</span>
+                  <span className="relative font-serif text-6xl text-gold-light/90 md:text-7xl">{initials(name)}</span>
+                  <span className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-gold transition-transform duration-300 group-hover:scale-x-100" />
+                </div>
+                <div className="p-6 md:p-7">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-gold">{role}</p>
+                  <h3 className="mt-3 text-2xl font-semibold text-ink">{name}</h3>
+                  <p className="mt-3 text-sm leading-7 text-neutral-600">{focus}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pillars */}
       <section className="bg-ivory py-24"><div className="container-x">
         <SectionHead title="Why Choose Arkstone" sub="Five commitments that protect your capital from first conversation to long after handover." />
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-6 lg:gap-6">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-6 lg:gap-6">
           {pillars.map(({ icon: I, t, d }, i) => (
             <Reveal
               key={t}
-              delay={i * 0.07}
-              className={`group relative flex h-full flex-col overflow-hidden border border-ink/10 bg-white p-7 shadow-[0_8px_30px_rgba(16,36,58,0.035)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/70 hover:shadow-[0_18px_45px_rgba(16,36,58,0.10)] sm:col-span-3 lg:col-span-4 ${i === 4 ? "sm:col-start-2 lg:col-start-7" : ""} ${i === 3 ? "lg:col-start-3" : ""}`}
+              delay={i * 0.09}
+              y={26}
+              className={`group relative flex h-full flex-col overflow-hidden border border-gold/30 bg-navy p-7 text-white shadow-[0_8px_30px_rgba(16,36,58,0.12)] transition-all duration-500 hover:-translate-y-2 hover:border-gold hover:bg-gold hover:text-ink hover:shadow-[0_18px_45px_rgba(16,36,58,0.16)] sm:col-span-1 lg:col-span-2 ${i === 3 ? "lg:col-start-2" : ""} ${i === 4 ? "lg:col-start-4" : ""}`}
             >
-              <span className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-gold transition-transform duration-300 group-hover:scale-x-100" />
+              <span className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-white transition-transform duration-300 group-hover:scale-x-100" />
               <div className="flex items-center justify-between">
-                <span className="flex h-12 w-12 items-center justify-center border border-gold/40 bg-gold-pale/60 text-ink transition-colors duration-300 group-hover:border-ink group-hover:bg-ink group-hover:text-gold">
+                <span className="flex h-12 w-12 items-center justify-center border border-gold/50 bg-navy-light text-gold-light transition-colors duration-300 group-hover:border-ink/20 group-hover:bg-white/50 group-hover:text-ink">
                   <I size={22} strokeWidth={1.5} />
                 </span>
-                <span className="font-sans text-xs font-semibold tracking-[0.18em] text-neutral-400">0{i + 1} <span className="text-gold">/</span> 05</span>
+                <span className="font-sans text-xs font-semibold tracking-[0.18em] text-white/60 transition-colors duration-300 group-hover:text-ink/60">0{i + 1} <span className="text-gold-light group-hover:text-ink">/</span> 05</span>
               </div>
-              <h3 className="mt-7 text-2xl font-semibold leading-tight">{t}</h3>
-              <p className="mt-3 flex-1 text-[15px] leading-7 text-neutral-600">{d}</p>
-              <div className="mt-6 flex items-center justify-between border-t border-ink/10 pt-4">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-400">The Arkstone difference</span>
-                <ArrowUpRight size={17} className="text-gold transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
+              <h3 className="mt-7 text-2xl font-semibold leading-tight text-white transition-colors duration-300 group-hover:text-ink">{t}</h3>
+              <p className="mt-3 flex-1 text-[15px] leading-7 text-white/75 transition-colors duration-300 group-hover:text-ink/80">{d}</p>
+              <div className="mt-6 flex items-center justify-between border-t border-white/15 pt-4 transition-colors duration-300 group-hover:border-ink/20">
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/55 transition-colors duration-300 group-hover:text-ink/60">The Arkstone difference</span>
+                <ArrowUpRight size={17} className="text-gold-light transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-ink" aria-hidden="true" />
               </div>
             </Reveal>
           ))}
@@ -107,8 +144,15 @@ export default function Home() {
         </div>
         <motion.div layout className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">
-            {list.map((p) => (
-              <motion.div layout key={p.id} initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.96 }}>
+            {list.map((p, i) => (
+              <motion.div
+                layout
+                key={p.id}
+                initial={{ opacity: 0, y: 36, scale: 0.96 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 18, scale: 0.96 }}
+                transition={{ duration: 0.7, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              >
                 <PropertyCard p={p} cta="Request Private Briefing" />
               </motion.div>
             ))}
@@ -128,7 +172,7 @@ export default function Home() {
               </button>
               <AnimatePresence initial={false}>
                 {openQ === i && (
-                  <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
+                  <motion.div initial={{ height: 0, opacity: 0, y: -10 }} animate={{ height: "auto", opacity: 1, y: 0 }} exit={{ height: 0, opacity: 0, y: -10 }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }} className="overflow-hidden">
                     <p className="pb-6 leading-relaxed text-neutral-600">{a}</p>
                   </motion.div>
                 )}
