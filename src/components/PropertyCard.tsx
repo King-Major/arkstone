@@ -17,7 +17,7 @@ export default function PropertyCard({ p, cta }: { p: Property; cta: string }) {
   const text = `Hello Arkstone, I'd like a private briefing on "${p.title}" (${p.location}, ${p.id}).`;
   return (
     <>
-      <article className="group flex flex-col border border-neutral-200 bg-white transition hover:border-gold hover:shadow-xl">
+      <article className="group flex flex-col border border-ink/10 bg-white transition duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-xl">
         <button onClick={() => setOpen(true)} className="relative block aspect-[4/3] overflow-hidden" aria-label={`View ${p.title}`}>
           <img src={p.images[0]} alt={p.title} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
           <span className="absolute left-3 top-3 flex items-center gap-1.5 bg-white px-3 py-1.5 text-xs font-semibold shadow"><BadgeCheck size={14} className="text-gold" />{p.titleStatus}</span>

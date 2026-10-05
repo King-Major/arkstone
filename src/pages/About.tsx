@@ -24,7 +24,7 @@ export default function About() {
         <Reveal className="space-y-6 font-serif text-xl leading-9 text-neutral-700">
           <p>Buying luxury property or commercial assets in Lagos should be an empowering milestone, not a stressful ordeal. Yet too often, buyers navigate unverified middlemen, unclear property titles, and builders who vanish the moment final payment is made.</p>
           <p>Arkstone Real Estate was established to set a higher standard. We operate as institutional real estate advisors, not casual salespeople trying to close a quick transaction.</p>
-          <p>From auditing title documents before taking you for an inspection, to negotiating fiercely on your behalf, providing 90 days of post-handover care, and inviting you into our private investor circle, our commitment is simple: <strong className="text-ink">Under-promise and over-deliver.</strong></p>
+          <p>From verifying title documents before taking you for an inspection, to negotiating fiercely on your behalf, providing 90 days of post-handover care, and inviting you into our private investor circle, our commitment is simple: <strong className="text-ink">Under-promise and over-deliver.</strong></p>
         </Reveal>
       </div></section>
       <section className="bg-ivory py-24"><div className="container-x">

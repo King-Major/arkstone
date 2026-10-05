@@ -20,7 +20,7 @@ export default function Assets() {
   const reset = () => { setLoc(""); setType(""); setTitle(""); setPrice(""); setQ(""); };
   return (
     <>
-      <PageBanner title="Curated Residential & Commercial Inventory." sub="Every listing carries a verified title badge and has passed our baseline legal audit." />
+      <PageBanner title="A Curated Collection of Exceptional Property." sub="Explore residential and commercial properties with verified title information and clear, considered details." />
       <section className="py-14"><div className="container-x">
         <div className="mb-10 grid gap-3 border border-neutral-200 bg-ivory p-5 md:grid-cols-6">
           <div className="relative md:col-span-2"><Search size={16} className="absolute left-3 top-3.5 text-neutral-400" /><input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search features, e.g. pool" className="input !pl-9" /></div>

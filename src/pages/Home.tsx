@@ -9,7 +9,7 @@ import { BriefForm } from "../components/Forms";
 
 const pillars = [
   { icon: KeyRound, t: "Direct Owner Access", d: "No middleman chains. We deal directly with primary title holders and verified developers so you get real prices, fast answers, and zero game-playing." },
-  { icon: FileCheck2, t: "Clear & Verified Paperwork", d: "No legal surprises. Before we ever show you a property, our legal team conducts baseline document checks so you know the title is 100% clean." },
+  { icon: FileCheck2, t: "Clear & Verified Paperwork", d: "Before we arrange an inspection, our legal team checks available title documents so you can make an informed decision with greater confidence." },
   { icon: Scale, t: "Strong Negotiation in Your Corner", d: "We work for you, not the seller. We negotiate fiercely on your behalf to secure the absolute best price, eliminate hidden fees, and maximize your capital." },
   { icon: HeartHandshake, t: "Complete Post-Handover Care", d: "We don't vanish after closing. We stay by your side for 90 days post-handover, handling move-in deep cleaning, estate registration, key security handovers, and developer repairs." },
   { icon: Gem, t: "The Arkstone Private Insider Circle", d: "Your relationship with us grows after you buy. Clients gain exclusive, private access to genuine distress sales, off-market commercial spaces, and high-yield investments before they hit the public market." },
@@ -21,8 +21,8 @@ const steps = [
   ["Welcome Home Support", "We organize a complimentary deep clean, assist with estate security registration, and handle any lingering builder adjustments."],
 ];
 const faqs = [
-  ["Do you charge an inspection fee before showing properties?", "No. We do not charge inspection fees. Instead, we use a quick 2-minute Acquisition Brief to understand your exact requirements, ensuring every property we present is 100% verified, live, and strictly aligned with your budget and lifestyle."],
-  ["How does Arkstone verify title documents before inspection?", "Every asset in our portfolio undergoes a baseline legal audit led by our in-house legal team. We confirm title ownership directly with primary owners and state registries before we take you on an inspection, protecting you from murky papers or legal disputes."],
+  ["Do you charge an inspection fee before showing properties?", "No. We do not charge inspection fees. Instead, we use a quick 2-minute Acquisition Brief to understand your requirements and present available properties aligned with your budget and lifestyle."],
+  ["How does Arkstone verify title documents before inspection?", "Our legal team reviews available title documents and verifies ownership information with primary owners and relevant registries before we arrange an inspection. We share the findings clearly so you can make an informed decision."],
   ["How do you handle negotiation with developers and sellers?", "We represent you, the buyer, not the seller. We bring institutional negotiation tactics to the table to ensure you get the true market valuation, eliminate hidden developer levies, and secure non-price value like extended warranties and service term coverage."],
   ["What is included in your 90-Day Post-Handover Care?", "Our service doesn't end when commission is paid. For 90 days after you receive your keys, we assist with move-in deep cleaning, estate gate registration, key handovers, and acting as your representative to resolve any lingering builder repairs."],
   ["How do I gain access to the Arkstone Private Insider Circle?", "Membership is automatically granted to clients who complete an acquisition through Arkstone. Members receive exclusive 24-hour priority access to genuine distress sales, off-market commercial assets, and high-yield investment opportunities across prime Lagos before they hit the public market."],
@@ -37,17 +37,17 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex min-h-screen items-center overflow-hidden pt-20">
+      <section className="relative flex min-h-[90vh] items-center overflow-hidden bg-ink pt-20">
         <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=2000&q=80" alt="" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-ink/80 to-ink/20" />
         <div className="container-x relative py-20">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-3xl">
-            <div className="mb-8 h-1 w-20 bg-gold" />
-            <h1 className="text-4xl font-extrabold leading-[1.08] md:text-6xl lg:text-7xl">Your Gateway to Lagos' Most Secured Real Estate Acquisition.</h1>
-            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-neutral-700">Direct owner and developer access. Pre-audited title documents. Expert price negotiation and 90-day post-handover support. No middleman chains, zero legal surprises.</p>
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-gold-light">A more considered way to invest</p>
+            <h1 className="max-w-2xl text-5xl font-semibold leading-[0.98] text-white md:text-7xl lg:text-8xl">Lagos property, <span className="text-gold-light">with confidence.</span></h1>
+            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/80">Direct access to exceptional properties, verified title information, expert negotiation, and attentive support long after handover.</p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <button className="btn-gold" onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}>Explore Verified Assets <ArrowRight size={16} /></button>
-              <a className="btn-outline bg-white/70" target="_blank" rel="noreferrer" href={wa("Hello Arkstone, I'd like to speak with an advisor.")}>Speak with an Advisor</a>
+              <button className="btn-gold" onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}>Explore Verified Properties <ArrowRight size={16} /></button>
+              <a className="btn-outline border-white/50 bg-white/5 text-white hover:border-gold hover:bg-white/10" target="_blank" rel="noreferrer" href={wa("Hello Arkstone, I'd like to speak with an advisor.")}>Speak with an Advisor</a>
             </div>
           </motion.div>
         </div>
@@ -84,7 +84,7 @@ export default function Home() {
 
       {/* Portfolio */}
       <section id="portfolio" className="scroll-mt-20 bg-ivory py-24"><div className="container-x">
-        <SectionHead title="Curated Portfolio Preview" sub="Every asset is title-audited before it appears here." />
+        <SectionHead title="Curated Portfolio Preview" sub="Every property is reviewed and its title information verified before it appears here." />
         <div className="mb-10 flex flex-wrap justify-center gap-3">
           {filters.map((x) => (
             <button key={x} onClick={() => setF(x)} className={`border px-5 py-2 text-sm font-medium transition ${f === x ? "border-gold bg-gold" : "border-neutral-300 bg-white hover:border-gold"}`}>{x}</button>
