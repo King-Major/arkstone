@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, FileCheck2, Gem, HeartHandshake, KeyRound, Minus, Plus, Scale } from "lucide-react";
+import { ArrowRight, ArrowUpRight, FileCheck2, Gem, HeartHandshake, KeyRound, Minus, Plus, Scale } from "lucide-react";
 import { properties, wa } from "../data";
 import { Reveal, SectionHead } from "../components/ui";
 import PropertyCard from "../components/PropertyCard";
@@ -57,12 +57,26 @@ export default function Home() {
       {/* Pillars */}
       <section className="bg-ivory py-24"><div className="container-x">
         <SectionHead title="Why Choose Arkstone" sub="Five commitments that protect your capital from first conversation to long after handover." />
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-6">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-6 lg:gap-6">
           {pillars.map(({ icon: I, t, d }, i) => (
-            <Reveal key={t} delay={i * 0.07} className={`border border-gold/50 bg-white p-8 lg:col-span-2 ${i === 3 ? "lg:col-start-2" : ""} ${i === 4 ? "md:col-span-2 lg:col-span-2" : ""}`}>
-              <I className="text-gold" size={30} strokeWidth={1.5} />
-              <h3 className="mt-5 text-xl font-semibold">{t}</h3>
-              <p className="mt-3 leading-relaxed text-neutral-600">{d}</p>
+            <Reveal
+              key={t}
+              delay={i * 0.07}
+              className={`group relative flex h-full flex-col overflow-hidden border border-ink/10 bg-white p-7 shadow-[0_8px_30px_rgba(16,36,58,0.035)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/70 hover:shadow-[0_18px_45px_rgba(16,36,58,0.10)] sm:col-span-3 lg:col-span-4 ${i === 4 ? "sm:col-start-2 lg:col-start-7" : ""} ${i === 3 ? "lg:col-start-3" : ""}`}
+            >
+              <span className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-gold transition-transform duration-300 group-hover:scale-x-100" />
+              <div className="flex items-center justify-between">
+                <span className="flex h-12 w-12 items-center justify-center border border-gold/40 bg-gold-pale/60 text-ink transition-colors duration-300 group-hover:border-ink group-hover:bg-ink group-hover:text-gold">
+                  <I size={22} strokeWidth={1.5} />
+                </span>
+                <span className="font-sans text-xs font-semibold tracking-[0.18em] text-neutral-400">0{i + 1} <span className="text-gold">/</span> 05</span>
+              </div>
+              <h3 className="mt-7 text-2xl font-semibold leading-tight">{t}</h3>
+              <p className="mt-3 flex-1 text-[15px] leading-7 text-neutral-600">{d}</p>
+              <div className="mt-6 flex items-center justify-between border-t border-ink/10 pt-4">
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-400">The Arkstone difference</span>
+                <ArrowUpRight size={17} className="text-gold transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
+              </div>
             </Reveal>
           ))}
         </div>
