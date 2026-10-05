@@ -1,6 +1,6 @@
 // ---- EDIT THESE: contact details --------------------------------------
-export const WHATSAPP = "2340000000000"; // international format, no "+"
-export const EMAIL = "hello@arkstone.ng";
+export const WHATSAPP = "2349165225000"; // international format, no "+"
+export const EMAIL = "Info@arkstonerealestate.ng";
 export const ADDRESS = "Office address, Ikoyi, Lagos, Nigeria";
 export const LEAD_ENDPOINT = import.meta.env.VITE_LEAD_ENDPOINT as string | undefined;
 
