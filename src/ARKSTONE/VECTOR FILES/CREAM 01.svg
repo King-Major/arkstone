@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #c9b386;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #c9b386;
+      }
+
+      .cls-2 {
+        font-family: GlacialIndifference-Bold, 'Glacial Indifference';
+        font-size: 31.95px;
+        font-weight: 700;
+        letter-spacing: .39em;
+      }
+    </style>
+  </defs>
+  <g>
+    <polygon class="cls-1" points="568.98 455.04 537.11 455.04 520.04 425.47 502.97 455.04 471.1 455.04 520.04 370.27 568.98 455.04"/>
+    <polygon class="cls-1" points="598.73 510.87 441.36 510.87 457.22 483.4 489.09 483.4 550.99 483.39 582.86 483.39 598.73 510.87"/>
+    <path class="cls-1" d="M638.97,576.24h-46.73c-21.2-11.6-45.59-18.21-71.53-18.21s-50.33,6.6-71.53,18.21h-47.22c14.42-13.08,31.04-23.8,49.26-31.56h0c21.31-9.09,44.81-14.12,69.5-14.12s46.9,4.76,67.75,13.38c18.47,7.63,35.34,18.29,49.98,31.37l.53.93Z"/>
+  </g>
+  <text class="cls-2" transform="translate(398.25 639.97)"><tspan x="0" y="0">ARKSTONE</tspan></text>
+</svg>

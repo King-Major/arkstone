@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-family: GlacialIndifference-Bold, 'Glacial Indifference';
+        font-size: 70.12px;
+        font-weight: 700;
+        letter-spacing: .39em;
+      }
+
+      .cls-4 {
+        letter-spacing: .39em;
+      }
+
+      .cls-5 {
+        letter-spacing: .29em;
+      }
+
+      .cls-3 {
+        font-family: GlacialIndifference-Regular, 'Glacial Indifference';
+        font-size: 58px;
+      }
+
+      .cls-6 {
+        letter-spacing: .39em;
+      }
+    </style>
+  </defs>
+  <g>
+    <polygon class="cls-1" points="287.91 520.9 266.48 520.9 255 501.02 243.52 520.9 222.09 520.9 255 463.9 287.91 520.9"/>
+    <polygon class="cls-1" points="307.91 558.44 202.1 558.44 212.76 539.97 234.19 539.97 275.81 539.97 297.24 539.97 307.91 558.44"/>
+    <path class="cls-1" d="M334.97,602.4h-31.42c-14.26-7.8-30.65-12.24-48.1-12.24s-33.84,4.44-48.1,12.24h-31.75c9.69-8.79,20.87-16,33.12-21.22h0c14.33-6.11,30.13-9.49,46.73-9.49s31.53,3.2,45.55,9c12.42,5.13,23.77,12.3,33.61,21.09l.36.62Z"/>
+  </g>
+  <text class="cls-2" transform="translate(384.24 530.76)"><tspan x="0" y="0">ARKSTONE</tspan></text>
+  <text class="cls-3" transform="translate(384.39 603.92)"><tspan class="cls-4" x="0" y="0">REAL ES</tspan><tspan class="cls-5" x="360.94" y="0">TA</tspan><tspan class="cls-6" x="456.35" y="0">TE</tspan></text>
+</svg>

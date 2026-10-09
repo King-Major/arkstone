@@ -3,18 +3,24 @@ import { Link, NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Mail, MapPin, Menu, MessageCircle, X } from "lucide-react";
 import { ADDRESS, EMAIL, wa } from "../data";
+import logomarkDark from "../ARKSTONE/04. LOGOMARK/LOGOMARK C.png";
+import logomarkLight from "../ARKSTONE/04. LOGOMARK/LOGOMARK W.png";
 
-export const Logo = ({ light = false }: { light?: boolean }) => (
-  <Link to="/" className="flex items-center gap-3" aria-label="Arkstone Real Estate home">
-    <span className="flex h-10 w-10 rotate-45 items-center justify-center border border-gold bg-ink">
-      <span className="-rotate-45 font-serif text-lg font-bold text-gold">A</span>
-    </span>
-    <span className="leading-none">
-      <span className={`block font-serif text-xl font-bold tracking-wide ${light ? "text-white" : "text-ink"}`}>ARKSTONE</span>
-      <span className={`text-[10px] tracking-[0.3em] ${light ? "text-white/55" : "text-neutral-500"}`}>REAL ESTATE</span>
-    </span>
-  </Link>
-);
+export const Logo = ({ light = false }: { light?: boolean }) => {
+  const src = light ? logomarkLight : logomarkDark;
+  const textClass = light ? "text-white/80" : "text-ink/80";
+  const subTextClass = light ? "text-white/60" : "text-ink/60";
+
+  return (
+    <Link to="/" className="flex shrink-0 items-center gap-2.5" aria-label="Arkstone Real Estate home">
+      <img src={src} alt="Arkstone Real Estate logo" className="h-8 w-auto object-contain sm:h-9 md:h-10" />
+      <div className={`flex flex-col leading-none text-[10px] font-medium tracking-[0.2em] uppercase ${textClass}`}>
+        <span className="text-[11px]">Arkstone</span>
+        <span className={`text-[9px] tracking-[0.18em] ${subTextClass}`}>Real Estate</span>
+      </div>
+    </Link>
+  );
+};
 
 const links = [["/", "Home"], ["/assets", "Available Assets"], ["/about", "About Us"], ["/contact", "Contact"]];
 const msg = "Hello Arkstone, I'd like to speak with an advisor.";

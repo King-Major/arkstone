@@ -1,11 +1,11 @@
-import { ArrowRight, Clock3, Mail, MapPin, MessageCircle } from "lucide-react";
+﻿import { ArrowRight, Clock3, Mail, MapPin, MessageCircle } from "lucide-react";
 import { ADDRESS, EMAIL, WHATSAPP, wa } from "../data";
 import { Reveal } from "../components/ui";
 import { ContactForm } from "../components/Forms";
 
 export default function Contact() {
   const rows = [
-    { I: MessageCircle, l: "Direct WhatsApp", v: `+${WHATSAPP}`, h: wa("Hello Arkstone, I'd like to speak with an advisor.") },
+    { I: MessageCircle, l: "Direct WhatsApp", v: `+${WHATSAPP}`.replace(/(\d{3})(\d{3})(\d{3})(\d{3})/, "$1 $2 $3 $4"), h: wa("Hello Arkstone, I'd like to speak with an advisor.") },
     { I: Mail, l: "Email", v: EMAIL, h: `mailto:${EMAIL}` },
     { I: MapPin, l: "Office Address", v: ADDRESS, h: undefined },
   ];
@@ -16,8 +16,8 @@ export default function Contact() {
         <div className="container-x relative grid items-end gap-8 lg:grid-cols-[1fr_auto]">
           <Reveal className="max-w-3xl">
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-gold-light">Let’s talk property</p>
-            <h1 className="text-5xl font-semibold leading-[1.02] md:text-7xl">Your next move<br /><span className="text-gold-light">starts with a conversation.</span></h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">Tell us what you’re looking for. An Arkstone advisor will listen, answer your questions, and help you explore the right next step.</p>
+            <h1 className="text-5xl font-semibold leading-[1.02] md:text-7xl">Let’s discuss your <span className="text-gold-light">real estate objectives.</span></h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">Whether you are considering a landmark residence, building a portfolio, acquiring commercial property, or exploring a specific opportunity, our team is available to discuss your requirements.</p>
           </Reveal>
           <Reveal delay={0.1} className="hidden border-l border-gold/40 pl-6 pb-1 lg:block">
             <p className="font-serif text-3xl text-white">Personal advice.<br /><span className="text-gold-light">No pressure.</span></p>
@@ -29,7 +29,7 @@ export default function Contact() {
         <div className="container-x">
           <div className="relative -mt-8 grid items-start gap-6 lg:-mt-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-8">
             <Reveal className="border border-ink/10 bg-white p-6 shadow-[0_18px_50px_rgba(16,36,58,0.08)] md:p-8">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Reach our team</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Contact details</p>
               <h2 className="mt-3 font-serif text-3xl font-semibold md:text-4xl">We’re here to help.</h2>
               <p className="mt-3 text-sm leading-6 text-neutral-600">Choose the way that works best for you. We’ll get back to you as soon as we can.</p>
               <div className="mt-7 space-y-3">
@@ -44,7 +44,7 @@ export default function Contact() {
             </Reveal>
             <Reveal delay={0.08} className="border border-ink/10 bg-white p-6 shadow-[0_18px_50px_rgba(16,36,58,0.08)] md:p-9 lg:p-10">
               <div className="mb-7 border-b border-ink/10 pb-6">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Send us a note</p>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Contact form</p>
                 <h2 className="mt-3 font-serif text-3xl font-semibold md:text-4xl">How can we help?</h2>
                 <p className="mt-2 text-sm leading-6 text-neutral-600">Share a little about your plans and we’ll be in touch personally.</p>
               </div>

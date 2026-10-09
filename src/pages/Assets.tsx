@@ -1,6 +1,6 @@
+﻿import { ArrowRight, BadgeCheck, Search, SlidersHorizontal } from "lucide-react";
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, BadgeCheck, Search, SlidersHorizontal } from "lucide-react";
 import { properties, wa } from "../data";
 import { Reveal } from "../components/ui";
 import PropertyCard from "../components/PropertyCard";
@@ -26,9 +26,9 @@ export default function Assets() {
         <div className="container-x relative">
           <Reveal className="max-w-3xl">
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-gold-light">A portfolio, considered</p>
-            <h1 className="text-5xl font-semibold leading-[1.02] md:text-7xl">Find the right place<br /><span className="text-gold-light">to make your next move.</span></h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">Explore a curated selection of residential and commercial properties across Lagos, with verified title information and clear details.</p>
-            <div className="mt-8 flex items-center gap-2 text-sm text-white/65"><BadgeCheck size={17} className="text-gold-light" /> Carefully selected opportunities across Lagos Island</div>
+            <h1 className="text-5xl font-semibold leading-[1.02] md:text-7xl">Curated residential & commercial real estate</h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">A considered selection of properties across Nigeria’s prime markets. Our portfolio is intentionally selective.</p>
+            <div className="mt-8 flex items-center gap-2 text-sm text-white/65"><BadgeCheck size={17} className="text-gold-light" /> Carefully selected opportunities across Lagos</div>
           </Reveal>
         </div>
       </section>
