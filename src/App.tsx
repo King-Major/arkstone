@@ -6,6 +6,10 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Assets from "./pages/Assets";
 import Contact from "./pages/Contact";
+import Services from "./pages/Services";
+import OperatingPrinciples from "./pages/OperatingPrinciples";
+import Insights from "./pages/Insights";
+import InsiderCircle from "./pages/InsiderCircle";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -20,6 +24,11 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/assets" element={<Assets />} />
           <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/operating-principles" element={<OperatingPrinciples />} />
+          <Route path="/insights" element={<Insights />} />
+          <Route path="/insights/:slug" element={<Insights />} />
+          <Route path="/insider-circle" element={<InsiderCircle />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

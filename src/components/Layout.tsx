@@ -22,7 +22,16 @@ export const Logo = ({ light = false }: { light?: boolean }) => {
   );
 };
 
-const links = [["/", "Home"], ["/assets", "Available Assets"], ["/about", "About Us"], ["/contact", "Contact"]];
+const links = [
+  ["/", "Home"],
+  ["/assets", "Available Assets"],
+  ["/about", "About Us"],
+  ["/services", "Services"],
+  ["/operating-principles", "Operating Principles"],
+  ["/insights", "Arkstone Insights"],
+  ["/insider-circle", "Insider Circle"],
+  ["/contact", "Contact"],
+] as const;
 const msg = "Hello Arkstone, I'd like to speak with an advisor.";
 
 export const Nav = () => {
@@ -31,20 +40,20 @@ export const Nav = () => {
     <header className="fixed inset-x-0 top-0 z-40 border-b border-ink/10 bg-ivory/95 backdrop-blur-md">
       <div className="container-x flex h-20 items-center justify-between">
         <Logo />
-        <nav className="hidden items-center gap-9 md:flex">
+        <nav className="hidden items-center gap-2 lg:flex 2xl:gap-3">
           {links.map(([to, label]) => (
-            <NavLink key={to} to={to} end className={({ isActive }) => `py-1 text-sm font-medium transition-colors hover:text-gold ${isActive ? "text-gold" : ""}`}>{label}</NavLink>
+            <NavLink key={to} to={to} end className={({ isActive }) => `whitespace-nowrap py-1 text-[11px] font-medium transition-colors hover:text-gold 2xl:text-sm ${isActive ? "text-gold" : ""}`}>{label}</NavLink>
           ))}
         </nav>
-        <a href={wa(msg)} target="_blank" rel="noreferrer" className="btn-gold hidden !py-2.5 md:inline-flex"><MessageCircle size={16} />Chat on WhatsApp</a>
-        <button className="md:hidden" onClick={() => setOpen(!open)} aria-label="Toggle menu">{open ? <X /> : <Menu />}</button>
+        <a href={wa(msg)} target="_blank" rel="noreferrer" className="btn-gold hidden !px-4 !py-2.5 2xl:inline-flex"><MessageCircle size={16} />Chat on WhatsApp</a>
+        <button className="lg:hidden" onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open}>{open ? <X /> : <Menu />}</button>
       </div>
       <AnimatePresence>
         {open && (
-          <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden border-t bg-ivory md:hidden">
+          <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="max-h-[calc(100vh-5rem)] overflow-y-auto border-t bg-ivory lg:hidden">
             <div className="container-x flex flex-col gap-1 py-4">
-              {links.map(([to, label]) => (<Link key={to} to={to} onClick={() => setOpen(false)} className="py-3 font-medium">{label}</Link>))}
-              <a href={wa(msg)} className="btn-gold mt-2">Chat on WhatsApp</a>
+              {links.map(([to, label]) => (<NavLink key={to} to={to} end onClick={() => setOpen(false)} className={({ isActive }) => `py-3 font-medium ${isActive ? "text-gold" : ""}`}>{label}</NavLink>))}
+              <a href={wa(msg)} target="_blank" rel="noreferrer" className="btn-gold mt-2"><MessageCircle size={16} />Chat on WhatsApp</a>
             </div>
           </motion.div>
         )}
