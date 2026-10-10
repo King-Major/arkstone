@@ -39,10 +39,10 @@ export default function OperatingPrinciples() {
           <SectionHead title="The standards behind our advice." sub="These principles guide how we source, assess, communicate, and support real estate decisions." />
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {principles.map(({ icon: Icon, title, text }, index) => (
-              <Reveal key={title} delay={index * 0.05} className="border border-ink/10 bg-white p-6 md:p-8">
-                <span className="flex h-12 w-12 items-center justify-center border border-gold/40 bg-gold-pale text-ink"><Icon size={22} /></span>
-                <h2 className="mt-5 text-xl font-semibold">{title}</h2>
-                <p className="mt-3 leading-7 text-neutral-600">{text}</p>
+              <Reveal key={title} delay={index * 0.05} className="group border border-ink bg-ink p-6 text-white transition-colors duration-200 hover:border-gold hover:bg-ivory active:border-gold active:bg-ivory md:p-8">
+                <span className="flex h-12 w-12 items-center justify-center border border-white/20 bg-white/10 text-gold-light transition-colors duration-200 group-hover:border-gold/40 group-hover:bg-gold-pale group-hover:text-ink group-active:border-gold/40 group-active:bg-gold-pale group-active:text-ink"><Icon size={22} /></span>
+                <h2 className="mt-5 text-xl font-semibold transition-colors duration-200 group-hover:text-ink group-active:text-ink">{title}</h2>
+                <p className="mt-3 leading-7 text-white/75 transition-colors duration-200 group-hover:text-neutral-600 group-active:text-neutral-600">{text}</p>
               </Reveal>
             ))}
           </div>
@@ -54,10 +54,10 @@ export default function OperatingPrinciples() {
           <SectionHead title="A disciplined assessment framework." sub="The factors considered vary by property and mandate. Our role is to help clients identify what merits attention and coordinate suitable professional review." />
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {factors.map(([title, text], index) => (
-              <Reveal key={title} delay={index * 0.04} className="border border-ink/10 bg-white p-6">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">0{index + 1}</p>
-                <h3 className="mt-3 text-xl font-semibold">{title}</h3>
-                <p className="mt-3 leading-7 text-neutral-600">{text}</p>
+              <Reveal key={title} delay={index * 0.04} className="group border border-ink bg-ink p-6 text-white transition-colors duration-200 hover:border-gold hover:bg-ivory active:border-gold active:bg-ivory">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold-light">0{index + 1}</p>
+                <h3 className="mt-3 text-xl font-semibold transition-colors duration-200 group-hover:text-ink group-active:text-ink">{title}</h3>
+                <p className="mt-3 leading-7 text-white/75 transition-colors duration-200 group-hover:text-neutral-600 group-active:text-neutral-600">{text}</p>
               </Reveal>
             ))}
           </div>

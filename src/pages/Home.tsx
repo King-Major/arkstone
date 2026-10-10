@@ -98,10 +98,10 @@ export default function Home() {
           <p className="mx-auto -mt-5 mb-12 max-w-3xl text-center text-lg leading-relaxed text-neutral-600">The property market can present hundreds of options. Our role is to determine which ones deserve your attention—and which ones don’t.</p>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {capabilities.map(({ icon: Icon, title, text }, i) => (
-              <Reveal key={title} delay={i * 0.06} className="border border-ink/10 bg-white p-6 shadow-[0_12px_30px_rgba(16,36,58,0.04)] md:p-7">
-                <span className="flex h-12 w-12 items-center justify-center border border-gold/40 bg-gold-pale text-ink"><Icon size={22} strokeWidth={1.5} /></span>
-                <h3 className="mt-5 text-xl font-semibold">{title}</h3>
-                <p className="mt-3 text-sm leading-7 text-neutral-600">{text}</p>
+              <Reveal key={title} delay={i * 0.06} className="group border border-ink bg-ink p-6 text-white shadow-[0_12px_30px_rgba(16,36,58,0.04)] transition-colors duration-200 hover:border-gold hover:bg-ivory active:border-gold active:bg-ivory md:p-7">
+                <span className="flex h-12 w-12 items-center justify-center border border-white/20 bg-white/10 text-gold-light transition-colors duration-200 group-hover:border-gold/40 group-hover:bg-gold-pale group-hover:text-ink group-active:border-gold/40 group-active:bg-gold-pale group-active:text-ink"><Icon size={22} strokeWidth={1.5} /></span>
+                <h3 className="mt-5 text-xl font-semibold transition-colors duration-200 group-hover:text-ink group-active:text-ink">{title}</h3>
+                <p className="mt-3 text-sm leading-7 text-white/75 transition-colors duration-200 group-hover:text-neutral-600 group-active:text-neutral-600">{text}</p>
               </Reveal>
             ))}
             <Reveal className="flex flex-col justify-between bg-ink p-7 text-white">
@@ -117,9 +117,9 @@ export default function Home() {
           <SectionHead title="A Beautiful Property Can Still Be the Wrong Decision." sub="We look beyond presentation. Depending on the mandate, our assessment considers:" />
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {assessment.map((item, i) => (
-              <Reveal key={item} delay={i * 0.04} className="flex items-start gap-4 border border-ink/10 bg-white p-5 md:p-6">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center bg-ink text-xs font-semibold text-gold-light">0{i + 1}</span>
-                <p className="pt-1 text-base font-medium leading-6 text-ink">{item}</p>
+              <Reveal key={item} delay={i * 0.04} className="group flex items-start gap-4 border border-ink bg-ink p-5 text-white transition-colors duration-200 hover:border-gold hover:bg-ivory active:border-gold active:bg-ivory md:p-6">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center bg-white/10 text-xs font-semibold text-gold-light transition-colors duration-200 group-hover:bg-gold-pale group-hover:text-ink group-active:bg-gold-pale group-active:text-ink">0{i + 1}</span>
+                <p className="pt-1 text-base font-medium leading-6 text-white/85 transition-colors duration-200 group-hover:text-ink group-active:text-ink">{item}</p>
               </Reveal>
             ))}
           </div>
