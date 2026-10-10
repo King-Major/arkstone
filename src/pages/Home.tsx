@@ -141,7 +141,6 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-14">
-            <h3 className="mb-7 text-center font-serif text-3xl font-semibold md:text-4xl">How We Help You Acquire with Confidence</h3>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {journey.map(([title, text], i) => (
                 <Reveal key={title} delay={i * 0.04} className="border border-ink/10 bg-white p-5">
