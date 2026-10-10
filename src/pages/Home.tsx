@@ -76,17 +76,17 @@ export default function Home() {
     <>
       <section className="relative flex min-h-[82vh] items-center overflow-hidden bg-ink pt-20">
         <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Lagos_skyline.jpg/1920px-Lagos_skyline.jpg" alt="Victoria Island skyline in Lagos" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-royal-deep/95 via-navy-deep/80 to-ink/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-ink/80 to-ink/20" />
         <a href="https://commons.wikimedia.org/wiki/File:Lagos_skyline.jpg" target="_blank" rel="noreferrer" className="absolute bottom-3 right-4 z-10 text-[10px] text-white/70 hover:text-white">Photo: Clara Sanchiz · CC BY-SA 2.0</a>
         <div className="container-x relative py-20">
           <motion.div initial={{ opacity: 0, y: 32, x: -20 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }} className="max-w-3xl">
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-royal-light">Better decisions. Greater confidence.</p>
-            <h1 className="max-w-3xl text-5xl font-semibold leading-[0.98] text-white md:text-7xl lg:text-8xl">Prime Real Estate, <span className="text-royal-light">Navigated with Clarity.</span></h1>
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-gold-light">Better decisions. Greater confidence.</p>
+            <h1 className="max-w-3xl text-5xl font-semibold leading-[0.98] text-white md:text-7xl lg:text-8xl">Prime Real Estate, <span className="text-gold-light">Navigated with Clarity.</span></h1>
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/80">Arkstone is a real estate advisory and acquisition firm helping homebuyers, investors, families, and corporate institutions make better property decisions across Nigeria’s prime markets.</p>
             <p className="mt-4 max-w-2xl leading-relaxed text-white/70">The property market can present hundreds of options. Our role is to determine which ones deserve your attention—and which ones don’t.</p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Link className="btn-royal" to="/contact">Request Advisory <ArrowRight size={16} /></Link>
-              <Link className="btn-outline border-white/50 bg-white/5 text-white hover:border-royal-light hover:bg-white/10" to="/assets">Explore Portfolio</Link>
+              <Link className="btn-gold" to="/contact">Request Advisory <ArrowRight size={16} /></Link>
+              <Link className="btn-outline border-white/50 bg-white/5 text-white hover:border-gold hover:bg-white/10" to="/assets">Explore Portfolio</Link>
             </div>
           </motion.div>
         </div>

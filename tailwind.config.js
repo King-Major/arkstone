@@ -4,11 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#0E1730",
-        navy: { DEFAULT: "#0E1730", light: "#1D315D", deep: "#081427" },
-        royal: { DEFAULT: "#3F4EC3", light: "#6270E5", soft: "#EEF2FF", pale: "#E9EDFF", deep: "#1C2D6F" },
-        gold: { DEFAULT: "#C8B39A", light: "#D8C7B4", pale: "#F7F0E8" },
-        ivory: "#F8F7F5",
+        ink: "#10243A",
+        navy: { DEFAULT: "#10243A", light: "#1B3552", deep: "#0A1928" },
+        gold: { DEFAULT: "#C9B386", light: "#D9C9A5", pale: "#F4EFE4" },
+        ivory: "#FAF8F3",
       },
       fontFamily: {
         serif: ['"Cormorant Garamond"', "Georgia", "serif"],
