@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import OperatingPrinciples from "./pages/OperatingPrinciples";
 import Insights from "./pages/Insights";
 import InsiderCircle from "./pages/InsiderCircle";
+import Careers from "./pages/Careers";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/insights" element={<Insights />} />
           <Route path="/insights/:slug" element={<Insights />} />
           <Route path="/insider-circle" element={<InsiderCircle />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

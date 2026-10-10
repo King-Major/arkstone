@@ -95,6 +95,7 @@ export default function Home() {
         <div className="container-x">
           <SectionHead title="More Than Property Listings. A Better Way to Buy." sub="High-value real estate requires more than market access. It demands foresight, sound judgment, thorough assessment, and precise execution." />
           <p className="mx-auto -mt-5 mb-12 max-w-3xl text-center text-lg leading-relaxed text-neutral-600">The property market can present hundreds of options. Our role is to determine which ones deserve your attention—and which ones don’t.</p>
+           <p className="mx-auto -mt-5 mb-12 max-w-3xl text-center text-lg leading-relaxed text-neutral-600">Our Approach is built on five Cabilities: </p>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {capabilities.map(({ icon: Icon, title, text }, i) => (
               <Reveal key={title} delay={i * 0.06} className="group border border-ink bg-ink p-6 text-white shadow-[0_12px_30px_rgba(16,36,58,0.04)] transition-colors duration-200 hover:border-gold hover:bg-ivory active:border-gold active:bg-ivory md:p-7">
@@ -166,7 +167,7 @@ export default function Home() {
           <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="border border-gold/30 bg-white/5 p-6 md:p-8">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-light">Flagship publication</p>
-              <h3 className="mt-4 font-serif text-3xl font-semibold leading-tight md:text-4xl">The Prime Real Estate Market Report & Acquisition Guide</h3>
+              <h3 className="mt-4 font-serif text-3xl font-semibold leading-tight md:text-4xl">The Lagos Prime Real Estate Market Report & Acquisition Guide</h3>
               <p className="mt-4 text-lg font-medium text-gold-light">Understand the Market Before You Commit Capital.</p>
               <p className="mt-4 leading-7 text-white/70">A practical guide for private investors, homebuyers, families, and corporate decision-makers considering Nigeria’s prime markets, including Ikoyi, Victoria Island, Lekki, and other relevant locations.</p>
               <p className="mt-3 text-sm leading-6 text-white/60">Explore property values, acquisition considerations, documentation, market positioning, capital preservation, and strategy.</p>

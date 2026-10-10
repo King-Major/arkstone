@@ -10,6 +10,9 @@ const data = (e: FormEvent<HTMLFormElement>) => Object.fromEntries(new FormData(
 const Done = ({ text }: { text: string }) => (
   <div className="flex flex-col items-center gap-3 py-10 text-center"><CheckCircle2 className="text-gold" size={44} /><p className="max-w-sm text-neutral-700">{text}</p></div>
 );
+const PrivacyStatement = () => (
+  <p className="text-xs leading-5 text-neutral-500"><strong>Privacy statement:</strong> Strictly confidential. Arkstone respects your privacy and will never share your contact details without your consent.</p>
+);
 
 export function PopupForm() {
   const [done, setDone] = useState(false);
@@ -43,7 +46,7 @@ export function PopupForm() {
           <option>Off-Plan</option><option>Land Investment</option><option>Private-Market Opportunity</option>
         </select>
       </F>
-      <p className="text-xs leading-5 text-neutral-500">Your information will be treated confidentially and will not be shared without your consent.</p>
+      <PrivacyStatement />
       {error && <p role="alert" className="text-sm text-red-700">{error}</p>}
       <button disabled={sending} className="btn-gold w-full disabled:cursor-not-allowed disabled:opacity-60">{sending ? "Sending…" : "Request Private Report"}</button>
     </form>
@@ -82,6 +85,7 @@ export function BriefForm() {
         <select required name="timeline" className="input" defaultValue=""><option value="" disabled>Select a timeline</option><option>Immediate</option><option>1–3 Months</option><option>Strategic Exploration</option></select>
       </F>
       <div className="md:col-span-2"><F label="Requirements"><textarea required name="message" rows={4} className="input" placeholder="Tell us a little about your objectives." /></F></div>
+      <div className="md:col-span-2"><PrivacyStatement /></div>
       {error && <p role="alert" className="text-sm text-red-700 md:col-span-2">{error}</p>}
       <button disabled={sending} className="btn-ink self-end md:col-span-2 disabled:cursor-not-allowed disabled:opacity-60">{sending ? "Sending…" : "Request Advisory"}</button>
     </form>
@@ -113,6 +117,7 @@ export function ContactForm() {
       <F label="Name"><input required name="name" className="input" /></F>
       <F label="Phone number"><input required name="phone" type="tel" className="input" /></F>
       <F label="Message"><textarea required name="message" rows={5} className="input" /></F>
+      <PrivacyStatement />
       {error && <p role="alert" className="text-sm text-red-700">{error}</p>}
       <button disabled={sending} className="btn-gold w-full disabled:cursor-not-allowed disabled:opacity-60">{sending ? "Sending…" : "Send Message"}</button>
     </form>
