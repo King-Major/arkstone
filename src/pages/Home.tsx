@@ -83,7 +83,6 @@ export default function Home() {
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-gold-light">Better decisions. Greater confidence.</p>
             <h1 className="max-w-3xl text-5xl font-semibold leading-[0.98] text-white md:text-7xl lg:text-8xl">Prime Real Estate, <span className="text-gold-light">Navigated with Clarity.</span></h1>
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/80">Arkstone is a real estate advisory and acquisition firm helping homebuyers, investors, families, and corporate institutions make better property decisions across Nigeria’s prime markets.</p>
-            <p className="mt-4 max-w-2xl leading-relaxed text-white/70">The property market can present hundreds of options. Our role is to determine which ones deserve your attention—and which ones don’t.</p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link className="btn-gold" to="/contact">Request Advisory <ArrowRight size={16} /></Link>
               <Link className="btn-outline border-white/50 bg-white/5 text-white hover:border-gold hover:bg-white/10" to="/assets">Explore Portfolio</Link>
