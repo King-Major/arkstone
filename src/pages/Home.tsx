@@ -8,35 +8,36 @@ import PropertyCard from "../components/PropertyCard";
 import { BriefForm } from "../components/Forms";
 
 const capabilities = [
-  { icon: KeyRound, title: "Direct Access", text: "Carefully selected residential, commercial, land, and development opportunities, including those not broadly marketed." },
-  { icon: FileCheck2, title: "Rigorous Assessment", text: "Coordination of professional reviews covering ownership, title, documentation, valuation, property particulars, and transaction considerations." },
-  { icon: Scale, title: "Market Intelligence", text: "Research, comparable-property analysis, pricing, location dynamics, and demand indicators to support informed decisions." },
-  { icon: HeartHandshake, title: "Strategic Negotiation", text: "Evaluation of commercial terms and negotiation with clearer objectives and a stronger understanding of the opportunity." },
-  { icon: Gem, title: "Acquisition & Continued Support", text: "Coordination with relevant legal and professional parties through acquisition, with support extending beyond completion where appropriate." },
+  { icon: KeyRound, title: "Direct Access", text: "We source carefully selected residential, commercial, land, and development opportunities, including properties that may not be broadly marketed." },
+  { icon: FileCheck2, title: "Rigorous Assessment", text: "We coordinate appropriate professional reviews across ownership, title, documentation, valuation, property particulars, and transaction considerations to identify and mitigate avoidable risks." },
+  { icon: Scale, title: "Market Intelligence", text: "We use relevant market research, comparable-property analysis, pricing information, location dynamics, and demand indicators to give clients a stronger basis for decision-making." },
+  { icon: HeartHandshake, title: "Strategic Negotiation", text: "We help clients evaluate commercial terms and approach negotiations with clearer objectives and better information." },
+  { icon: Gem, title: "Acquisition & Continued Support", text: "We coordinate with relevant legal and professional parties through the acquisition process and provide practical support following completion." },
 ];
 
 const assessment = [
-  "Location and surrounding development",
-  "Documentation and ownership",
-  "Entry price and market position",
-  "Demand and liquidity",
-  "Income and capital appreciation potential",
-  "Long-term suitability and sustainability",
+  "Location — Quality, accessibility, demand, trajectory, and strategic relevance.",
+  "Documentation & Ownership — Title, ownership, approvals, and supporting documentation.",
+  "Entry Position — Whether the acquisition price is supported by relevant market evidence.",
+  "Market Position — How the asset compares with competing properties.",
+  "Demand & Liquidity — The quality of its potential occupier, buyer, or tenant market.",
+  "Income & Capital Potential — Where relevant, potential for rental income, capital appreciation, wealth preservation, or portfolio diversification.",
+  "Long-Term Suitability — Whether the property serves the client’s stated objectives.",
 ];
 
 const audiences = [
-  ["Homebuyers", "For individuals and families seeking a home aligned with their needs, lifestyle, and long-term plans."],
-  ["Private Investors", "For investors weighing income potential, capital appreciation, risk, and long-term wealth creation."],
-  ["Corporate Clients", "For businesses and institutions making strategic property acquisitions and corporate real estate decisions."],
+  ["Homebuyers", "For individuals and families seeking homes for personal use, family living, legacy, or long-term ownership."],
+  ["Private Investors", "For individuals, families, and private investors seeking to preserve, grow, diversify, or strategically deploy capital through real estate."],
+  ["Corporate Clients", "For companies and institutions making significant property decisions aligned with broader corporate objectives."],
 ];
 
 const journey = [
-  ["Strategic Alignment", "Understand your objectives, priorities, requirements, and financial considerations."],
-  ["Curated Access", "Identify relevant opportunities that fit your brief."],
-  ["Assessment", "Evaluate the property, market position, documentation considerations, and relevant risks."],
-  ["Advisory & Negotiation", "Support informed decisions and strategic negotiation."],
-  ["Acquisition & Closing", "Coordinate with relevant professionals and transaction parties toward completion."],
-  ["Continued Relationship", "Provide appropriate ongoing guidance, opportunities, and market insight."],
+  ["Strategic Alignment", "We understand your objectives, requirements, priorities, timeline, and financial considerations."],
+  ["Curated Access", "We identify and present opportunities that align with your brief."],
+  ["Assessment", "We evaluate the property, market position, documentation considerations, and relevant risks."],
+  ["Advisory & Negotiation", "We help you assess the opportunity, make informed decisions, and negotiate strategically."],
+  ["Acquisition & Closing", "We coordinate with relevant professionals and transaction parties toward completion."],
+  ["Continued Relationship", "We provide appropriate ongoing guidance, market insight, and access to relevant opportunities."],
 ];
 
 const insights = [
@@ -75,17 +76,17 @@ export default function Home() {
     <>
       <section className="relative flex min-h-[82vh] items-center overflow-hidden bg-ink pt-20">
         <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Lagos_skyline.jpg/1920px-Lagos_skyline.jpg" alt="Victoria Island skyline in Lagos" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-ink/80 to-ink/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-royal-deep/95 via-navy-deep/80 to-ink/20" />
         <a href="https://commons.wikimedia.org/wiki/File:Lagos_skyline.jpg" target="_blank" rel="noreferrer" className="absolute bottom-3 right-4 z-10 text-[10px] text-white/70 hover:text-white">Photo: Clara Sanchiz · CC BY-SA 2.0</a>
         <div className="container-x relative py-20">
           <motion.div initial={{ opacity: 0, y: 32, x: -20 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }} className="max-w-3xl">
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-gold-light">Better decisions. Greater confidence.</p>
-            <h1 className="max-w-3xl text-5xl font-semibold leading-[0.98] text-white md:text-7xl lg:text-8xl">Prime Real Estate <span className="text-gold-light">Navigated with Clarity</span></h1>
-            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/80">Arkstone is a real estate advisory and acquisition firm helping private clients, investors, families, and corporate institutions make better property decisions across Nigeria’s prime markets.</p>
-            <p className="mt-4 max-w-2xl leading-relaxed text-white/70">We combine carefully sourced opportunities, market intelligence, rigorous assessment, and strategic negotiation to help clients acquire real estate with confidence and long-term value in mind.</p>
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-royal-light">Better decisions. Greater confidence.</p>
+            <h1 className="max-w-3xl text-5xl font-semibold leading-[0.98] text-white md:text-7xl lg:text-8xl">Prime Real Estate, <span className="text-royal-light">Navigated with Clarity.</span></h1>
+            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/80">Arkstone is a real estate advisory and acquisition firm helping homebuyers, investors, families, and corporate institutions make better property decisions across Nigeria’s prime markets.</p>
+            <p className="mt-4 max-w-2xl leading-relaxed text-white/70">The property market can present hundreds of options. Our role is to determine which ones deserve your attention—and which ones don’t.</p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Link className="btn-gold" to="/contact">Request Advisory <ArrowRight size={16} /></Link>
-              <Link className="btn-outline border-white/50 bg-white/5 text-white hover:border-gold hover:bg-white/10" to="/assets">Explore Portfolio</Link>
+              <Link className="btn-royal" to="/contact">Request Advisory <ArrowRight size={16} /></Link>
+              <Link className="btn-outline border-white/50 bg-white/5 text-white hover:border-royal-light hover:bg-white/10" to="/assets">Explore Portfolio</Link>
             </div>
           </motion.div>
         </div>
@@ -94,7 +95,7 @@ export default function Home() {
       <section className="bg-ivory py-20 md:py-24">
         <div className="container-x">
           <SectionHead title="More Than Property Listings. A Better Way to Buy." sub="High-value real estate requires more than market access. It demands foresight, sound judgment, thorough assessment, and precise execution." />
-          <p className="mx-auto -mt-5 mb-12 max-w-3xl text-center text-lg leading-relaxed text-neutral-600">The market can present hundreds of options. We help clients understand conditions, evaluate relevant risks, and focus on opportunities that deserve serious consideration.</p>
+          <p className="mx-auto -mt-5 mb-12 max-w-3xl text-center text-lg leading-relaxed text-neutral-600">The property market can present hundreds of options. Our role is to determine which ones deserve your attention—and which ones don’t.</p>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {capabilities.map(({ icon: Icon, title, text }, i) => (
               <Reveal key={title} delay={i * 0.06} className="border border-ink/10 bg-white p-6 shadow-[0_12px_30px_rgba(16,36,58,0.04)] md:p-7">
@@ -131,7 +132,7 @@ export default function Home() {
 
       <section className="bg-ivory py-20 md:py-24">
         <div className="container-x">
-          <SectionHead title="Who We Serve & How We Help You Acquire with Confidence" sub="A considered process built around your objectives, from first conversation through acquisition and beyond." />
+          <SectionHead title="Who We Serve" sub="Living & Heritage. Building Value Beyond the Transaction. Asset Precision." />
           <div className="grid gap-5 md:grid-cols-3">
             {audiences.map(([title, text], i) => (
               <Reveal key={title} delay={i * 0.06} className="border border-ink/10 bg-white p-6 md:p-7">
@@ -162,7 +163,7 @@ export default function Home() {
           <Reveal className="mx-auto mb-12 max-w-3xl text-center">
             <h2 className="text-4xl font-semibold leading-tight text-white md:text-6xl">Perspectives for Better Real Estate Decisions.</h2>
             <div className="mx-auto mt-5 h-px w-16 bg-gold" />
-            <p className="mt-5 text-lg leading-relaxed text-white/70">Research and perspectives to help you navigate the Lagos real estate market with greater clarity.</p>
+            <p className="mt-5 text-lg leading-relaxed text-white/70">Market intelligence, acquisition perspectives, and considered views on Nigeria’s prime real estate market.</p>
           </Reveal>
           <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="border border-gold/30 bg-white/5 p-6 md:p-8">

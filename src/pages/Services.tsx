@@ -5,33 +5,33 @@ import { Reveal, SectionHead } from "../components/ui";
 const services = [
   {
     icon: KeyRound,
-    title: "Opportunity Sourcing & Direct Access",
-    text: "We source residential, commercial, land, and development opportunities against a defined client brief. Where appropriate, our network can provide access to opportunities that are not broadly marketed.",
-    outcome: "A relevant selection, not an indiscriminate list.",
+    title: "Property Sales & Marketing",
+    text: "We support the marketing and sale of selected properties by connecting relevant opportunities with suitable buyers through considered positioning, market understanding, and a professional transaction process.",
+    outcome: "A relevant opportunity matched to a suitable buyer.",
   },
   {
     icon: FileCheck2,
-    title: "Property & Transaction Assessment",
-    text: "We coordinate appropriate reviews of ownership, title and supporting documentation, valuation, property particulars, and transaction considerations with relevant professional advisers.",
-    outcome: "A clearer view of the questions and reviews a property requires.",
+    title: "Property Acquisition",
+    text: "We help clients identify suitable properties, assess relevant considerations, evaluate opportunities, and navigate the acquisition process in line with their objectives.",
+    outcome: "A more considered acquisition path.",
   },
   {
     icon: Scale,
-    title: "Market Intelligence",
-    text: "We bring together market research, comparable-property analysis, pricing, location dynamics, and demand indicators to put an opportunity in context.",
-    outcome: "Better information for a more considered decision.",
+    title: "Off-Plan Property Advisory",
+    text: "We help clients evaluate off-plan opportunities by considering the developer, project details, available documentation, pricing, location, delivery considerations, and relevant risks before committing capital.",
+    outcome: "Greater clarity before commitment.",
   },
   {
     icon: HeartHandshake,
-    title: "Strategic Negotiation",
-    text: "We help clients clarify objectives, understand commercial terms, and approach negotiation with stronger information and a more disciplined position.",
-    outcome: "A negotiation informed by the client’s priorities.",
+    title: "Real Estate Investment Advisory",
+    text: "We help investors assess real estate opportunities in relation to market conditions, entry price, potential income, capital appreciation, risk, and long-term investment objectives.",
+    outcome: "Investment decisions informed by context.",
   },
   {
     icon: Gem,
-    title: "Acquisition Coordination & Continued Support",
-    text: "We coordinate with relevant legal, financial, and professional parties through the acquisition process, and can continue supporting clients after completion where appropriate.",
-    outcome: "A connected process from mandate through ownership.",
+    title: "Property Portfolio Management",
+    text: "We help clients approach their property holdings strategically, with support for portfolio reviews, performance considerations, and the coordination of relevant property management professionals where required.",
+    outcome: "A stronger strategic view of ownership.",
   },
 ];
 

@@ -3,12 +3,12 @@ import { ArrowRight, Compass, FileSearch, Handshake, Scale, ShieldCheck, UsersRo
 import { Reveal, SectionHead } from "../components/ui";
 
 const principles = [
-  { icon: UsersRound, title: "Client objectives first", text: "We begin by understanding the client’s intended use, priorities, financial considerations, timeline, and tolerance for risk. Advice and opportunity selection should follow the brief, not a sales target." },
-  { icon: Compass, title: "Relevance over volume", text: "Access is valuable when it is aligned. We seek opportunities that merit attention and explain why they may or may not fit the client’s objectives." },
-  { icon: FileSearch, title: "Evidence before conviction", text: "Presentation is not proof. We consider available market evidence, property particulars, ownership information, documentation, and the questions that require independent professional review." },
-  { icon: Scale, title: "Assessment with perspective", text: "We look at location, entry position, market context, demand, liquidity, suitability, and long-term considerations together rather than relying on a single feature or headline claim." },
-  { icon: Handshake, title: "Clear advice and negotiation", text: "We help clients understand material considerations, commercial terms, open questions, and negotiation objectives so they can make informed decisions." },
-  { icon: ShieldCheck, title: "Professional coordination and discretion", text: "We work with relevant legal and professional parties within the scope of each mandate, handle client information discreetly, and avoid promising certainty where real estate carries risk." },
+  { icon: UsersRound, title: "Rigor Over Speed", text: "Important decisions deserve appropriate scrutiny. We prioritise thorough assessment over unnecessary urgency." },
+  { icon: Compass, title: "Discretion & Quiet Authority", text: "Our clients entrust us with significant decisions and sensitive information. We operate with confidentiality, professionalism, and restraint." },
+  { icon: FileSearch, title: "Data-Informed Precision", text: "We use relevant market information, comparable properties, location dynamics, and available evidence to strengthen decision-making." },
+  { icon: Scale, title: "Independent Judgment", text: "Clients need an informed perspective—not simply another person trying to close a transaction. Our recommendations must serve the client’s objectives." },
+  { icon: Handshake, title: "Curated Selectivity", text: "We do not measure value by the number of properties we can present. We focus on opportunities that are relevant, defensible, and worthy of consideration." },
+  { icon: ShieldCheck, title: "Absolute Stewardship", text: "A transaction is important. The value created by making the right decision over time is even more important." },
 ];
 
 const factors = [

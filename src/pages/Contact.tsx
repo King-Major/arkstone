@@ -16,7 +16,7 @@ export default function Contact() {
         <div className="container-x relative grid items-end gap-8 lg:grid-cols-[1fr_auto]">
           <Reveal className="max-w-3xl">
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-gold-light">Let’s talk property</p>
-            <h1 className="text-5xl font-semibold leading-[1.02] md:text-7xl">Let’s discuss your <span className="text-gold-light">real estate objectives.</span></h1>
+            <h1 className="text-5xl font-semibold leading-[1.02] md:text-7xl">Let’s Discuss Your <span className="text-gold-light">Real Estate Objectives.</span></h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">Whether you are considering a landmark residence, building a portfolio, acquiring commercial property, or exploring a specific opportunity, our team is available to discuss your requirements.</p>
           </Reveal>
           <Reveal delay={0.1} className="hidden border-l border-gold/40 pl-6 pb-1 lg:block">

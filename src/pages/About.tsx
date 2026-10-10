@@ -3,11 +3,11 @@ import { ArrowRight, Eye, Gem, HeartHandshake, ShieldCheck, Target } from "lucid
 import { Reveal, SectionHead } from "../components/ui";
 
 const principles = [
-  ["Market Intelligence", "We study relevant market conditions so clients can make decisions from a stronger information base."],
   ["Selective Access", "We focus on relevant opportunities rather than overwhelming clients with inventory."],
   ["Disciplined Assessment", "We examine the factors that determine whether an opportunity deserves further consideration."],
   ["Strategic Advisory", "We bring context, perspective, and negotiation discipline to important decisions."],
   ["Long-Term Stewardship", "We view acquisition as the beginning of a relationship—not the end of a transaction."],
+  ["Market Intelligence", "We study relevant market conditions so clients can make decisions from a stronger information base."],
 ];
 
 const leadership = [
