@@ -99,6 +99,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      <div aria-hidden="true" className="h-6 bg-ivory md:h-8" />
     </>
   );
 }

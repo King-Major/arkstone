@@ -95,7 +95,7 @@ export default function Home() {
         <div className="container-x">
           <SectionHead title="More Than Property Listings. A Better Way to Buy." sub="High-value real estate requires more than market access. It demands foresight, sound judgment, thorough assessment, and precise execution." />
           <p className="mx-auto -mt-5 mb-12 max-w-3xl text-center text-lg leading-relaxed text-neutral-600">The property market can present hundreds of options. Our role is to determine which ones deserve your attention—and which ones don’t.</p>
-           <p className="mx-auto -mt-5 mb-12 max-w-3xl text-center text-lg leading-relaxed text-neutral-600">Our Approach is built on five Cabilities: </p>
+          <p className="mx-auto -mt-5 mb-12 max-w-3xl text-center text-lg leading-relaxed text-neutral-600">Our Approach is built on five capabilities:</p>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {capabilities.map(({ icon: Icon, title, text }, i) => (
               <Reveal key={title} delay={i * 0.06} className="group border border-ink bg-ink p-6 text-white shadow-[0_12px_30px_rgba(16,36,58,0.04)] transition-colors duration-200 hover:border-gold hover:bg-ivory active:border-gold active:bg-ivory md:p-7">
@@ -104,14 +104,14 @@ export default function Home() {
                 <p className="mt-3 text-sm leading-7 text-white/75 transition-colors duration-200 group-hover:text-neutral-600 group-active:text-neutral-600">{text}</p>
               </Reveal>
             ))}
-            <Reveal className="flex flex-col justify-between bg-ink p-7 text-white">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-light">Our approach</p>
-                <p className="mt-4 font-serif text-2xl leading-snug">Information, perspective, and professional support from opportunity to acquisition.</p>
-              </div>
-              <Link to="/services" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-gold-light hover:text-white">Explore our services <ArrowRight size={16} /></Link>
-            </Reveal>
           </div>
+          <Reveal className="mt-5 flex flex-col justify-between gap-7 border border-ink/15 bg-ivory p-7 text-ink md:flex-row md:items-end md:p-9">
+            <div className="max-w-3xl">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-ink">Our approach</p>
+              <p className="mt-4 font-serif text-2xl leading-snug md:text-3xl">Information, perspective, and professional support from opportunity to acquisition.</p>
+            </div>
+            <Link to="/services" className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-ink transition-colors hover:text-gold">Explore our services <ArrowRight size={16} /></Link>
+          </Reveal>
         </div>
         <div className="container-x mt-20 border-t border-ink/10 pt-16">
           <SectionHead title="A Beautiful Property Can Still Be the Wrong Decision." sub="We look beyond presentation. Depending on the mandate, our assessment considers:" />
@@ -142,6 +142,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-14">
+             <SectionHead title="How We Help You Acquire with Confidence" sub="A clear process keeps the client brief at the centre of each decision." />
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {journey.map(([title, text], i) => (
                 <Reveal key={title} delay={i * 0.04} className="border border-ink/10 bg-white p-5">

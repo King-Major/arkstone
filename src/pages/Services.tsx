@@ -74,7 +74,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="bg-ivory py-20 md:py-28">
+      {/* <section className="bg-ivory py-20 md:py-28">
         <div className="container-x">
           <SectionHead title="How We Help You Acquire with Confidence" sub="A clear process keeps the client brief at the centre of each decision." />
           <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -88,7 +88,7 @@ export default function Services() {
           </ol>
           <p className="mx-auto mt-8 max-w-3xl text-center leading-7 text-neutral-600">A successful acquisition can be the beginning of a longer-term client relationship, supported by relevant opportunities and insight over time.</p>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-20 md:py-24">
         <div className="container-x flex flex-col items-start justify-between gap-6 border border-gold/30 bg-ink p-7 text-white md:flex-row md:items-center md:p-10">
