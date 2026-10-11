@@ -35,15 +35,6 @@ const services = [
   },
 ];
 
-const stages = [
-  ["Strategic Alignment", "We understand your objectives, requirements, priorities, timeline, and financial considerations."],
-  ["Curated Access", "We identify and present opportunities that align with your brief."],
-  ["Assessment", "We evaluate the property, market position, documentation considerations, and relevant risks."],
-  ["Advisory & Negotiation", "We help you assess the opportunity, make informed decisions, and negotiate strategically."],
-  ["Acquisition & Closing", "We coordinate with relevant professionals and transaction parties toward completion."],
-  ["Continued Relationship", "We provide appropriate ongoing guidance, market insight, and access to relevant opportunities."],
-];
-
 export default function Services() {
   return (
     <>
@@ -74,21 +65,18 @@ export default function Services() {
         </div>
       </section>
 
-      {/* <section className="bg-ivory py-20 md:py-28">
+      <section className="bg-ivory py-20 md:py-24">
         <div className="container-x">
-          <SectionHead title="How We Help You Acquire with Confidence" sub="A clear process keeps the client brief at the centre of each decision." />
-          <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {stages.map(([title, text], index) => (
-              <Reveal key={title} delay={index * 0.04} className="border border-ink/10 bg-white p-6">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">Stage 0{index + 1}</p>
-                <h3 className="mt-3 text-xl font-semibold">{title}</h3>
-                <p className="mt-3 leading-7 text-neutral-600">{text}</p>
-              </Reveal>
-            ))}
-          </ol>
-          <p className="mx-auto mt-8 max-w-3xl text-center leading-7 text-neutral-600">A successful acquisition can be the beginning of a longer-term client relationship, supported by relevant opportunities and insight over time.</p>
+          <div className="border-l-2 border-gold bg-[#f2efe9] px-4 py-5 md:px-8 md:py-8">
+            <p className="max-w-5xl text-2xl leading-[1.35] tracking-[-0.03em] text-ink md:text-[2.5rem] lg:text-[3rem]">
+              Our objective is not simply to find a property. It is to help determine whether the property deserves the client’s capital.
+            </p>
+            <Link to="/operating-principles" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-ink transition-colors hover:text-gold md:mt-6 ">
+              Explore our operating principles <ArrowRight size={15} />
+            </Link>
+          </div>
         </div>
-      </section> */}
+      </section>
 
       <section className="py-20 md:py-24">
         <div className="container-x flex flex-col items-start justify-between gap-6 border border-gold/30 bg-ink p-7 text-white md:flex-row md:items-center md:p-10">
