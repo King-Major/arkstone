@@ -55,7 +55,17 @@ export default function About() {
 
       <section className="bg-ivory py-20 md:py-28">
         <div className="container-x">
-          <SectionHead title="Our Approach" sub="A method built around information, alignment, and clear judgment." />
+          <Reveal className="mb-12 flex flex-col justify-between gap-7 border-l-2 border-gold bg-[#f2efe9] p-7 text-ink md:flex-row md:items-end md:p-9">
+            <div className="max-w-3xl">
+              <p className="text-xs font-bold uppercase tracking-[0.2em]">Our approach</p>
+              <p className="mt-4 font-serif text-2xl leading-snug md:text-3xl">
+                Information, perspective, and professional support from opportunity to acquisition.
+              </p>
+            </div>
+            <Link to="/services" className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-ink transition-colors hover:text-gold">
+              Explore our services <ArrowRight size={16} />
+            </Link>
+          </Reveal>
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-5">
             {principles.map(([title, text], i) => (
               <Reveal key={title} delay={i * 0.06} className="border border-ink/10 bg-white p-6 shadow-[0_12px_30px_rgba(16,36,58,0.04)]">

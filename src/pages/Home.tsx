@@ -105,7 +105,7 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
-          <Reveal className="mt-8 border-l-2 border-gold bg-gold-pale/60 p-6 md:p-8">
+          <Reveal className="mt-5 flex flex-col justify-between gap-7 border-l-2 border-gold bg-[#f2efe9] p-7 text-ink md:flex-row md:items-end md:p-9">
             <div className="max-w-3xl">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-ink">Our approach</p>
               <p className="mt-4 font-serif text-2xl leading-snug md:text-3xl">Information, perspective, and professional support from opportunity to acquisition.</p>
