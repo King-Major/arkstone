@@ -65,6 +65,13 @@ export default function Services() {
         </div>
       </section>
 
+        <section className="py-20 md:py-24">
+        <div className="container-x flex flex-col items-start justify-between gap-6 border border-gold/30 bg-ink p-7 text-white md:flex-row md:items-center md:p-10">
+          <div><p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-light">Start with your objectives</p><h2 className="mt-3 max-w-2xl font-serif text-3xl font-semibold md:text-4xl">Let’s identify the right next step.</h2></div>
+          <Link to="/contact" className="btn-gold shrink-0">Request Advisory <ArrowRight size={16} /></Link>
+        </div>
+      </section>
+
       <section className="bg-ivory py-20 md:py-24">
         <div className="container-x">
           <div className="border-l-2 border-gold bg-[#f2efe9] px-4 py-5 md:px-8 md:py-8">
@@ -78,12 +85,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-20 md:py-24">
-        <div className="container-x flex flex-col items-start justify-between gap-6 border border-gold/30 bg-ink p-7 text-white md:flex-row md:items-center md:p-10">
-          <div><p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-light">Start with your objectives</p><h2 className="mt-3 max-w-2xl font-serif text-3xl font-semibold md:text-4xl">Let’s identify the right next step.</h2></div>
-          <Link to="/contact" className="btn-gold shrink-0">Request Advisory <ArrowRight size={16} /></Link>
-        </div>
-      </section>
+    
     </>
   );
 }
