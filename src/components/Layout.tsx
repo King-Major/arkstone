@@ -169,7 +169,7 @@ export const Footer = () => (
     <div className="container-x grid gap-10 py-14 md:grid-cols-3">
       <div><Logo light /><p className="mt-5 max-w-xs text-sm leading-relaxed text-white/65">Arkstone is a real estate advisory and acquisition firm helping home buyers, investors, and organisations make informed property decisions across Nigeria’s prime markets.</p></div>
       <div className="text-sm">
-        <h3 className="mb-4 font-serif text-lg font-semibold text-white">EXPLORE</h3>
+        <h3 className="mb-4 font-serif text-base font-semibold text-white">EXPLORE</h3>
         <ul className="space-y-2 text-white/65">
           <li><Link className="transition-colors hover:text-gold-light" to="/">Home</Link></li>
           <li><Link className="transition-colors hover:text-gold-light" to="/assets">Portfolio</Link></li>
@@ -182,7 +182,7 @@ export const Footer = () => (
         </ul>
       </div>
       <div className="space-y-3 text-sm text-white/65">
-        <h3 className="mb-4 font-serif text-lg font-semibold text-white">CONTACT US</h3>
+        <h3 className="mb-4 font-serif text-base font-semibold text-white">CONTACT US</h3>
         <p className="flex gap-2"><a className="flex items-center gap-2 text-white/65 transition-colors hover:text-gold-light" href={`https://wa.me/${WHATSAPP}`.replace(/\D/g, "")} target="_blank" rel="noreferrer"><MessageCircle size={16} className="mt-0.5 text-gold" />Official phone number</a></p>
         <p className="flex gap-2"><a className="flex items-center gap-2 text-white/65 transition-colors hover:text-gold-light" href={`mailto:${EMAIL}`}><Mail size={16} className="mt-0.5 text-gold" />{EMAIL}</a></p>
         <p className="flex gap-2"><a className="flex items-center gap-2 text-white/65 transition-colors hover:text-gold-light" href="https://maps.google.com/maps?q=Ikoyi%2C%20Lagos" target="_blank" rel="noreferrer"><MapPin size={16} className="mt-0.5 text-gold" />{ADDRESS}</a></p>

@@ -71,20 +71,6 @@ export default function Services() {
           <Link to="/contact" className="btn-gold shrink-0">Request Advisory <ArrowRight size={16} /></Link>
         </div>
       </section>
-
-      <section className="bg-ivory py-20 md:py-24">
-        <div className="container-x">
-          <div className="border-l-2 border-gold bg-[#f2efe9] px-4 py-5 md:px-8 md:py-8">
-            <p className="max-w-5xl text-2xl leading-[1.35] tracking-[-0.03em] text-ink md:text-[2.5rem] lg:text-[3rem]">
-              Our objective is not simply to find a property. It is to help determine whether the property deserves the client’s capital.
-            </p>
-            <Link to="/operating-principles" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-ink transition-colors hover:text-gold md:mt-6 ">
-              Explore our operating principles <ArrowRight size={15} />
-            </Link>
-          </div>
-        </div>
-      </section>
-
     
     </>
   );
