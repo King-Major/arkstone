@@ -11,6 +11,13 @@ import OperatingPrinciples from "./pages/OperatingPrinciples";
 import Insights from "./pages/Insights";
 import InsiderCircle from "./pages/InsiderCircle";
 import Careers from "./pages/Careers";
+import {
+  CommercialPreferencePage,
+  HomebuyerPreferencePage,
+  InspectionSchedulePage,
+  InvestorPreferencePage,
+  PostViewingFeedbackPage,
+} from "./pages/LeadForms";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -32,6 +39,11 @@ export default function App() {
           <Route path="/insider-circle" element={<InsiderCircle />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/inspection-schedule" element={<InspectionSchedulePage />} />
+          <Route path="/homebuyer-preference" element={<HomebuyerPreferencePage />} />
+          <Route path="/investor-preference" element={<InvestorPreferencePage />} />
+          <Route path="/commercial-preference" element={<CommercialPreferencePage />} />
+          <Route path="/post-viewing-feedback" element={<PostViewingFeedbackPage />} />
         </Routes>
       </main>
       <Footer />

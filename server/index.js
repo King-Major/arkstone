@@ -65,14 +65,19 @@ function field(body, name, maxLength, required = false) {
 function getLead(body) {
   if (!body || typeof body !== "object" || Array.isArray(body)) throw new Error("Invalid request.");
   const kind = body.kind;
-  if (!["contact", "acquisition-brief", "report-download"].includes(kind)) {
+  const kinds = [
+    "contact", "acquisition-brief", "report-download", "inspection-schedule",
+    "homebuyer-preference", "investor-preference", "commercial-preference", "post-viewing-feedback",
+  ];
+  if (!kinds.includes(kind)) {
     throw new Error("Invalid request type.");
   }
 
+  const requiresPhone = kind !== "post-viewing-feedback";
   const lead = {
     kind,
     name: field(body, "name", 120, true),
-    phone: field(body, "phone", 40, true),
+    phone: field(body, "phone", 40, requiresPhone),
     email: field(body, "email", 254),
     interest: field(body, "interest", 120),
     asset: field(body, "asset", 80),
@@ -88,6 +93,13 @@ function getLead(body) {
   if (kind === "contact" && !lead.message) throw new Error("Message is required.");
   if (kind === "acquisition-brief" && (!lead.email || !lead.asset || !lead.timeline || !lead.message)) {
     throw new Error("Email, area of interest, timeline, and requirements are required.");
+  }
+  if (["inspection-schedule", "homebuyer-preference", "investor-preference", "commercial-preference"].includes(kind) &&
+    (!lead.email || !lead.message)) {
+    throw new Error("Email and form details are required.");
+  }
+  if (kind === "post-viewing-feedback" && !lead.message) {
+    throw new Error("Feedback details are required.");
   }
   return lead;
 }
@@ -138,7 +150,7 @@ const server = createServer(async (request, response) => {
     const details = [
       `Type: ${lead.kind}`,
       `Name: ${lead.name}`,
-      `Phone: ${lead.phone}`,
+      lead.phone && `Phone: ${lead.phone}`,
       lead.email && `Email: ${lead.email}`,
       lead.interest && `Primary interest: ${lead.interest}`,
       lead.asset && `Area of interest: ${lead.asset}`,
@@ -149,6 +161,11 @@ const server = createServer(async (request, response) => {
       contact: "Website contact enquiry",
       "acquisition-brief": "New acquisition brief",
       "report-download": "Prime Real Estate Report request",
+      "inspection-schedule": "New property inspection request",
+      "homebuyer-preference": "New homebuyer preference",
+      "investor-preference": "New investor preference",
+      "commercial-preference": "New commercial property requirement",
+      "post-viewing-feedback": "New post-viewing feedback",
     }[lead.kind];
     const email = {
       from,
@@ -180,7 +197,8 @@ const server = createServer(async (request, response) => {
     }
     if (error.message?.startsWith("Invalid ") || error.message === "Email is required." ||
       error.message === "Primary interest is required." || error.message === "Message is required." ||
-      error.message === "Email, area of interest, timeline, and requirements are required.") {
+      error.message === "Email, area of interest, timeline, and requirements are required." ||
+      error.message === "Email and form details are required." || error.message === "Feedback details are required.") {
       sendJson(response, 400, { error: error.message === "Invalid request." ? "Please check the form and try again." : error.message }, origin);
       return;
     }

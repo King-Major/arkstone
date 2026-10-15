@@ -26,9 +26,9 @@ const assessment = [
 ];
 
 const audiences = [
-  ["Homebuyers", "For individuals and families seeking homes for personal use, family living, legacy, or long-term ownership."],
-  ["Private Investors", "For individuals, families, and private investors seeking to preserve, grow, diversify, or strategically deploy capital through real estate."],
-  ["Corporate Clients", "For companies and institutions making significant property decisions aligned with broader corporate objectives."],
+  ["Homebuyers", "Find a home for personal living, family, and long-term ownership."],
+  ["Private Investors", "Explore opportunities to grow, diversify, and preserve capital."],
+  ["Corporate Clients", "Source property solutions aligned with your business objectives."],
 ];
 
 const journey = [
@@ -133,13 +133,22 @@ export default function Home() {
       <section className="bg-ivory py-20 md:py-24">
         <div className="container-x">
           <SectionHead title="Who We Serve" sub="Living & Heritage. Building Value Beyond the Transaction. Asset Precision." />
-          <div className="grid gap-5 md:grid-cols-3">
+          <nav aria-label="Who we serve forms" className="mx-auto grid max-w-5xl overflow-hidden border border-ink/15 bg-white sm:grid-cols-3">
             {audiences.map(([title, text], i) => (
-              <Reveal key={title} delay={i * 0.06} className="border border-ink/10 bg-white p-6 md:p-7">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">{title}</p>
-                <p className="mt-4 leading-7 text-neutral-600">{text}</p>
-              </Reveal>
+              <Link
+                key={title}
+                to={["/homebuyer-preference", "/investor-preference", "/commercial-preference"][i]}
+                className="group flex min-h-28 flex-col justify-center border-b border-ink/10 px-6 py-5 transition-colors hover:bg-ink sm:border-b-0 sm:border-r sm:last:border-r-0"
+              >
+                <span className="text-xs font-bold uppercase tracking-[0.18em] text-gold">{title}</span>
+                <span className="mt-2 text-sm leading-6 text-neutral-600 transition-colors group-hover:text-white/75">{text}</span>
+                <span className="mt-3 text-sm font-semibold text-ink transition-colors group-hover:text-gold-light">Share your preferences <ArrowRight size={15} className="ml-1 inline" /></span>
+              </Link>
             ))}
+          </nav>
+          <div className="mt-5 flex flex-wrap justify-center gap-x-7 gap-y-2 text-sm font-semibold">
+            <Link to="/inspection-schedule" className="text-ink/70 transition-colors hover:text-gold">Schedule an inspection <ArrowRight size={14} className="ml-1 inline" /></Link>
+            <Link to="/post-viewing-feedback" className="text-ink/70 transition-colors hover:text-gold">Share post-viewing feedback <ArrowRight size={14} className="ml-1 inline" /></Link>
           </div>
           <div className="mt-14">
              <SectionHead title="How We Help You Acquire with Confidence" sub="A clear process keeps the client brief at the centre of each decision." />
