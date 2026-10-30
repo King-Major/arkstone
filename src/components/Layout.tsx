@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, BookOpenText, Briefcase, ChevronDown, Compass, Mail, MapPin, Menu, MessageCircle, Scale, Sparkles, X, Linkedin, Instagram, Twitter } from "lucide-react";
+import { ArrowUpRight, BookOpenText, Briefcase, ChevronDown, Compass, Mail, MapPin, Menu, MessageCircle, Scale, Sparkles, X, Linkedin, Instagram, Youtube } from "lucide-react";
 import { ADDRESS, EMAIL, WHATSAPP, wa } from "../data";
 import logomarkDark from "../ARKSTONE/04. LOGOMARK/LOGOMARK C.png";
 import logomarkLight from "../ARKSTONE/04. LOGOMARK/LOGOMARK W.png";
@@ -167,7 +167,7 @@ export const WhatsAppFloat = () => (
 export const Footer = () => (
   <footer className="border-t border-gold/30 bg-ink text-white">
     <div className="container-x grid gap-10 py-14 md:grid-cols-3">
-      <div><Logo light /><p className="mt-5 max-w-xs text-sm leading-relaxed text-white/65">Arkstone is a real estate advisory and acquisition firm helping home buyers, investors, and organisations make informed property decisions across Nigeria’s prime markets.</p></div>
+      <div><Logo light /><p className="mt-5 max-w-xs text-sm leading-relaxed text-white/65">Arkstone is a real estate advisory and acquisition firm helping home buyers, investors, and organisations make informed property decisions across Lagos’s prime markets.</p></div>
       <div className="text-sm">
         <h3 className="mb-4 font-serif text-base font-semibold text-white">EXPLORE</h3>
         <ul className="space-y-2 text-white/65">
@@ -179,6 +179,7 @@ export const Footer = () => (
           <li><Link className="transition-colors hover:text-gold-light" to="/operating-principles">Operating Principles</Link></li>
           <li><Link className="transition-colors hover:text-gold-light" to="/careers">Careers</Link></li>
           <li><Link className="transition-colors hover:text-gold-light" to="/insider-circle">Arkstone Insider</Link></li>
+          <li><Link className="transition-colors hover:text-gold-light" to="/privacy-policy">Privacy Policy</Link></li>
         </ul>
       </div>
       <div className="space-y-3 text-sm text-white/65">
@@ -186,13 +187,13 @@ export const Footer = () => (
         <p className="flex gap-2"><a className="flex items-center gap-2 text-white/65 transition-colors hover:text-gold-light" href={`https://wa.me/${WHATSAPP}`.replace(/\D/g, "")} target="_blank" rel="noreferrer"><MessageCircle size={16} className="mt-0.5 text-gold" />Official phone number</a></p>
         <p className="flex gap-2"><a className="flex items-center gap-2 text-white/65 transition-colors hover:text-gold-light" href={`mailto:${EMAIL}`}><Mail size={16} className="mt-0.5 text-gold" />{EMAIL}</a></p>
         <p className="flex gap-2"><a className="flex items-center gap-2 text-white/65 transition-colors hover:text-gold-light" href="https://maps.google.com/maps?q=Ikoyi%2C%20Lagos" target="_blank" rel="noreferrer"><MapPin size={16} className="mt-0.5 text-gold" />{ADDRESS}</a></p>
-        {/* <div className="mt-2 flex items-center gap-3">
-          <a href="#" className="text-white/65 transition-colors hover:text-gold"><Twitter size={18} /></a>
-          <a href="#" className="text-white/65 transition-colors hover:text-gold"><Instagram size={18} /></a>
-          <a href="#" className="text-white/65 transition-colors hover:text-gold"><Linkedin size={18} /></a>
-        </div> */}
+        <div className="mt-5 flex items-center gap-4 border-t border-white/10 pt-4">
+          <a href="https://www.linkedin.com/company/arkstone-real-estate/" target="_blank" rel="noreferrer" aria-label="Arkstone on LinkedIn" className="text-white/65 transition-colors hover:text-gold"><Linkedin size={18} /></a>
+          <a href="https://www.instagram.com/arkstonerealestate?mdxt=Y3RrbTkxYjV6ZXpj" target="_blank" rel="noreferrer" aria-label="Arkstone on Instagram" className="text-white/65 transition-colors hover:text-gold"><Instagram size={18} /></a>
+          <a href="https://www.youtube.com/@Arkstonerealestate" target="_blank" rel="noreferrer" aria-label="Arkstone on YouTube" className="text-white/65 transition-colors hover:text-gold"><Youtube size={18} /></a>
+        </div>
       </div>
     </div>
-    <div className="border-t border-white/10 py-5 text-center text-xs text-white/45">© {new Date().getFullYear()} Arkstone Real Estate. All rights reserved.</div>
+    <div className="border-t border-white/10 py-5 text-center text-xs text-white/45">© {new Date().getFullYear()} Arkstone Real Estate. All rights reserved. · <Link className="transition-colors hover:text-gold-light" to="/privacy-policy">Privacy Policy</Link></div>
   </footer>
 );

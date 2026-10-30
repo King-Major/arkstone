@@ -11,6 +11,7 @@ import OperatingPrinciples from "./pages/OperatingPrinciples";
 import Insights from "./pages/Insights";
 import InsiderCircle from "./pages/InsiderCircle";
 import Careers from "./pages/Careers";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import {
   CommercialPreferencePage,
   HomebuyerPreferencePage,
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="/insider-circle" element={<InsiderCircle />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/inspection-schedule" element={<InspectionSchedulePage />} />
           <Route path="/homebuyer-preference" element={<HomebuyerPreferencePage />} />
           <Route path="/investor-preference" element={<InvestorPreferencePage />} />

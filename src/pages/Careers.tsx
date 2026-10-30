@@ -40,8 +40,8 @@ export default function Careers() {
             <h2 className="mt-3 font-serif text-4xl font-semibold leading-tight md:text-5xl">Thoughtful people. Better decisions.</h2>
           </Reveal>
           <Reveal className="space-y-5 text-base leading-8 text-neutral-600 md:text-lg">
-            <p>We are building a real estate advisory and acquisition firm focused on helping clients navigate Nigeria’s prime property markets with clarity, diligence, and confidence. Our work requires more than market knowledge. It requires integrity, analytical thinking, professionalism, and a commitment to excellence.</p>
-            <p>We welcome conversations with individuals who share these values and are interested in contributing to the future of real estate advisory in Nigeria.</p>
+            <p>We are building a real estate advisory and acquisition firm focused on helping clients navigate Lagos’s prime property markets with clarity, diligence, and confidence. Our work requires more than market knowledge. It requires integrity, analytical thinking, professionalism, and a commitment to excellence.</p>
+            <p>We welcome conversations with individuals who share these values and are interested in contributing to the future of real estate advisory in Lagos.</p>
           </Reveal>
         </div>
       </section>

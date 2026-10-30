@@ -21,7 +21,7 @@ export default function Contact() {
           </Reveal>
           <Reveal delay={0.1} className="hidden border-l border-gold/40 pl-6 pb-1 lg:block">
             <p className="font-serif text-3xl text-white">Personal advice.<br /><span className="text-gold-light">No pressure.</span></p>
-            <p className="mt-3 text-xs uppercase tracking-[0.16em] text-white/45">Lagos, Nigeria</p>
+            <p className="mt-3 text-xs uppercase tracking-[0.16em] text-white/45">Lagos</p>
           </Reveal>
         </div>
       </section>

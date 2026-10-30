@@ -190,7 +190,7 @@ export default function Insights() {
               </p>
               <p className="mt-4 leading-7 text-white/70">
                 A practical guide for private investors, homebuyers, families,
-                and corporate decision-makers considering Nigeria’s prime
+                and corporate decision-makers considering Lagos’s prime
                 markets, including Ikoyi, Victoria Island, Lekki, and other
                 relevant locations.
               </p>

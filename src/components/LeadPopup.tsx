@@ -30,7 +30,7 @@ export default function LeadPopup() {
             <button onClick={() => setOpen(false)} className="absolute right-4 top-4 text-neutral-500 hover:text-ink" aria-label="Close"><X /></button>
             <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-gold">Arkstone Insights</p>
             <h2 className="pr-6 text-2xl font-bold md:text-3xl">Lagos Prime Real Estate Market Report & Acquisition Guide</h2>
-            <p className="mb-6 mt-3 text-sm leading-relaxed text-neutral-600">Request our practical guide to property values, acquisition considerations, documentation, market positioning, and strategy across Nigeria’s prime markets.</p>
+            <p className="mb-6 mt-3 text-sm leading-relaxed text-neutral-600">Request our practical guide to property values, acquisition considerations, documentation, market positioning, and strategy across Lagos’s prime markets.</p>
             <PopupForm />
           </motion.div>
         </motion.div>

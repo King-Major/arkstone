@@ -6,7 +6,7 @@ const principles = [
   { icon: UsersRound, title: "Rigor Over Speed", text: "Important decisions deserve appropriate scrutiny. We prioritise thorough assessment over unnecessary urgency." },
   { icon: Compass, title: "Discretion & Quiet Authority", text: "Our clients entrust us with significant decisions and sensitive information. We operate with confidentiality, professionalism, and restraint." },
   { icon: FileSearch, title: "Data-Informed Precision", text: "We use relevant market information, comparable properties, location dynamics, and available evidence to strengthen decision-making." },
-  { icon: Scale, title: "Independent Judgment", text: "Clients need an informed perspective—not simply another person trying to close a transaction. Our recommendations must serve the client’s objectives." },
+  { icon: Scale, title: "Independent Judgment", text: "Clients need an informed perspective, not simply another person trying to close a transactionWe tell you clearly whom we represent and how we are paid. Our recommendations must serve the objectives of the client we are engaged to advise, and if a property is wrong for you, we will say so." },
   { icon: Handshake, title: "Curated Selectivity", text: "We do not measure value by the number of properties we can present. We focus on opportunities that are relevant, defensible, and worthy of consideration." },
   { icon: ShieldCheck, title: "Absolute Stewardship", text: "A transaction is important. The value created by making the right decision over time is even more important." },
 ];
